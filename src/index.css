@@ -34,11 +34,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0px 150px;
-  background: black;
+  background: #0F1126;
 }
 .logo {
   display: flex;
-  background: black;
+  background: #0F1126;
   padding: 0px 0px;
   font-size:larger;
 }
