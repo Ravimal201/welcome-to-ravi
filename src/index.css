@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family:poppins ;
+  src: url("../src/reources/fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: poppins-bold;
+  src: url("../src/reources/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: poppins-semi;
+  src: url("../src/reources/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: alextrandia-black;
+  src: url("../src/reources/fonts/Alexandria-Black.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 150px;
+  background: black;
+}
+.logo {
+  display: flex;
+  background: black;
+  padding: 0px 0px;
+  font-size:larger;
+}
+
+.navbar h1 {
+  font-family: poppins-bold,sans-serif;
+  color: #969EF9;
+}
+.navbar h2 {
+  padding-left: 10px;
+  font-family: poppins-semi,sans-serif;
+}
+
+.navbar ul {
+    font-size: medium;
+  list-style: none;
+  display: flex;
+  font-family: Poppins, sans-serif;
+}
+
+.navbar li {
+  position: relative;
+  padding: 20px 30px;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.navbar li {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar li::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #969EF9, transparent 60%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navbar li:hover::before {
+  opacity: 0.4;
+}
+.navbar li::before {
+  left: var(--x);
+  top: var(--y);
+}
+
+
+
+
+/* home SECTION */
+.home {
+  width: 100%;
+  height: 100vh;
+}
+video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.homebox {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homebox img {
+  position: absolute;
+  flex-direction: column;
+  width: 1000px;
+}
