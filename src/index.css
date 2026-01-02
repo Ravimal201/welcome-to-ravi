@@ -13,9 +13,14 @@
   src: url("../src/reources/fonts/Poppins-SemiBold.ttf");
 }
 @font-face {
+  font-family: poppins-regular;
+  src: url("../src/reources/fonts/Poppins-Regular.ttf");
+}
+@font-face {
   font-family: alextrandia-black;
   src: url("../src/reources/fonts/Alexandria-Black.ttf");
 }
+
 
 * {
   margin: 0;
@@ -114,5 +119,55 @@ video {
 .homebox img {
   position: absolute;
   flex-direction: column;
-  width: 1000px;
+  width: 929px;
+}
+
+/* About section */
+.about {
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Top (purple area) */
+.about-top {
+  height: 50vh;
+  background: white;
+  padding: 80px 150px;
+  color: black;
+}
+.about-top h2 {
+  font-family: poppins-bold,sans-serif;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -400px;
+}
+.about-top p {
+  margin-top: 25px;
+  font-family: poppins-regular,sans-serif;
+  display: flex;
+  text-align: left;
+  max-width: 850px;
+}
+
+
+/* Bottom (white area) */
+.about-bottom {
+  height: 50vh;
+  background: white;
+  padding: 80px 150px;
+  color: black;
+}
+
+/* About Image */
+.about-img {
+  position: absolute;
+  right: 120px;
+  bottom: 0;
+  height: 85%;
+  z-index: 10;
 }
