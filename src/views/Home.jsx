@@ -15,10 +15,12 @@ function Home() {
             <div className="homebox">
                 <img className="homeboximgRavi" src={imRavi} alt="Ravimal" />
 
-                <img className="homeboximg one" src={seOne} alt="SE One" />
-                <img  className="homemyimg" src={myImg} alt="My Image" />
-                
-                <img className="homeboximg two" src={seTwo} alt="SE Two" />
+                <div className="imageBox">
+                    <img className="homeboximg one" src={seOne} alt="SE One" />
+                    <img  className="homemyimg" src={myImg} alt="My Image" />
+                    
+                    <img className="homeboximg two" src={seTwo} alt="SE Two" />
+                </div>
             </div>
         </section>
     );
