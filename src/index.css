@@ -28,6 +28,7 @@ body {
   color: white;
 }
 
+
 /* NAVBAR */
 .navbar {
   display: flex;
@@ -35,47 +36,47 @@ body {
   align-items: center;
   padding: 0px 150px;
   background: #0F1126;
+  position: relative;
+  z-index: 100;
 }
+
 .logo {
   display: flex;
-  background: #0F1126;
-  padding: 0px 0px;
-  font-size:larger;
+  align-items: center;
+  font-size: larger;
 }
 
 .navbar h1 {
-  font-family: poppins-bold,sans-serif;
+  font-family: poppins-bold, sans-serif;
   color: #969EF9;
 }
+
 .navbar h2 {
   padding-left: 10px;
-  font-family: poppins-semi,sans-serif;
+  font-family: poppins-semi, sans-serif;
+  font-size: 18px;
 }
 
-.navbar ul {
-    font-size: medium;
+/* NAV LINKS */
+.nav-links {
   list-style: none;
   display: flex;
   font-family: Poppins, sans-serif;
 }
 
-.navbar li {
+.nav-links li {
   position: relative;
-  padding: 20px 30px;
-  cursor: default;
-  transition: color 0.3s ease;
-}
-
-.navbar li {
-  position: relative;
+  padding: 15px 25px;
+  cursor: pointer;
   overflow: hidden;
 }
 
-.navbar li::before {
+/* HOVER EFFECT */
+.nav-links li::before {
   content: "";
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   background: radial-gradient(circle, #969EF9, transparent 60%);
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -83,36 +84,219 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.navbar li:hover::before {
+.nav-links li:hover::before {
   opacity: 0.4;
 }
-.navbar li::before {
+
+.nav-links li::before {
   left: var(--x);
   top: var(--y);
 }
 
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0px 50px;
+  }
+
+  .nav-links li {
+    padding: 15px 15px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #0F1126;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+  }
+
+  .nav-links.active {
+    max-height: 300px;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+  .navbar h2 {
+    font-size: 14px;
+  }
+
+  .navbar h1 {
+    font-size: 18px;
+  }
+}
 
 
-
-/* home SECTION */
+/* HOME SECTION */
 .home {
   width: 100%;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
-video {
+
+/* VIDEO BACKGROUND */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
+  height: 93%;
   object-fit: cover;
 }
 
+/* CONTENT LAYER */
 .homebox {
+  position: relative;
+  width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.homebox img {
+.homeboximgRavi {
   position: absolute;
-  flex-direction: column;
-  width: 1000px;
+  top: 25%;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 250px;
+}
+
+/* SYNC BACKGROUND IMAGES */
+.homeboximg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+}
+
+.homeboximg.one {
+  top: 45%;
+  animation: scaleFloat 5s ease-in-out infinite;
+}
+
+.homeboximg.two {
+  top: 45%;
+  animation: scaleFloat 5s ease-in-out infinite;
+}
+
+/* MAIN PERSON IMAGE */
+.homemyimg {
+  position: absolute;
+  top: 45%;
+  left: 60%; /* little bit left */
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+@keyframes scaleFloat {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.15);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .homeboximg {
+    width: 600px;
+  }
+
+  .homeboximgRavi {
+    top: 20%;
+    width: 150px;
+}
+
+}
+
+@media (max-width: 768px) {
+
+  .homeboximgRavi {
+    left: 50%;
+    right: 50%;
+    top: 8%;
+    width: 150px;
+  }
+
+  .homeboximg {
+    width: 90%;
+    top: 55%;
+    width: 400px;
+  }
+
+  .homemyimg {
+    width: 450px;
+    left: 50%;
+    top: 50%;
+  }
+  .bg-video {
+    height: 93%;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .homeboximgRavi {
+    top: 7%;
+    width: 100px;
+  }
+
+  .homeboximg {
+    width: 300px;
+    top: 60%;
+  }
+
+  .homemyimg {
+    width: 350px;
+    top: 40%;
+  }
+  .bg-video {
+    height: 73.5%;
+  }
+  
 }
