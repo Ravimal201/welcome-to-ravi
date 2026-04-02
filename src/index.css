@@ -495,7 +495,7 @@ body {
     top: -201px;
   }
   .about-image img {
-    width: 0;
+    visibility: hidden;
   }
   .about-content {
     margin: 0;
@@ -515,5 +515,184 @@ body {
   .education h3 {
     margin-left: 0px;
     font-size: 16px;
+  }
+}
+
+
+
+
+
+
+/* CardSlider */
+
+.skillpage {
+  background-color: black;
+  margin-top: -51px;
+}
+.skillcontainer {
+  position: relative;
+  min-height: auto;
+  background: url(./reources/images/skillbg.jpg) no-repeat center center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px;
+}
+
+.skillcontainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 0;
+}
+
+.skillcontainer > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Title */
+.skilltitle {
+  font-family: alextrandia-black, sans-serif;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+/* Cards layout */
+.skillcards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  align-items: stretch; /* important */
+}
+
+/* Default small cards */
+.skillcard {
+  background: #969EF9;
+  color: black;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Small state */
+.skillcard.small {
+  flex: 1;              /* ✅ equal width behavior */
+  min-width: 100px;     /* prevents too small */
+  max-width: 500px;     /* optional limit */
+  height: auto;
+  min-height: 80px;
+  font-family: poppins-bold, sans-serif;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Active (clicked) card */
+.skillcard.active {
+  width: auto;
+  min-width: 500px;
+  height: auto;          /* ✅ grow with content */
+  min-height: 120px;
+
+  transform: scale(1.05); /* slightly reduce scale for stability */
+  z-index: 10;
+  opacity: 1;
+
+  box-shadow: 0 0px 50px rgba(188, 142, 232, 0.6);
+}
+
+/* Content (hidden until active) */
+.skillcontent {
+  font-size: 14px;
+}
+
+/* Hover effect */
+.skillcard:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+.skillcontent-container {
+  margin-bottom: 40px;
+}
+.skillcontent-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ✅ centers list items horizontally */
+  padding-left: 0;       /* remove default indent */
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  max-height: none;   /* ensure no limit */
+}
+
+.skillcontent-list li {
+  margin-bottom: 5px;
+}
+.skillactive-row {
+  font-family: poppins, sans-serif;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.skillactive-row h3 {
+  font-family: poppins-bold, sans-serif;
+  margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+  .skilltitle {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .skillcards-container {
+    gap: 10px;
+    flex-direction: column;   /* stack cards */
+    align-items: center;
+  }
+
+  .skillcard.small {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .skillcard.active {
+    min-width: 280px;
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 900px) {
+  .skillcards-container {
+    gap: 10px;
+  }
+
+  .skillcard.small {
+    min-width: 100px;
+  }
+
+}
+
+@media (min-width: 1400px) {
+  .skillcards-container {
+    max-width: 1100px;
+  }
+
+  .skillcard.small {
+    min-width: 160px;
+  }
+
+  .skillcard.active {
+    min-width: 600px;
   }
 }
