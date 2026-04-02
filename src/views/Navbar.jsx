@@ -29,10 +29,55 @@ function Navbar() {
       </div>
 
       <ul className={menuOpen ? "nav-links active" : "nav-links"}>
-        <li onMouseMove={handleMouseMove}>Home</li>
-        <li onMouseMove={handleMouseMove}>About</li>
-        <li onMouseMove={handleMouseMove}>Projects</li>
-        <li onMouseMove={handleMouseMove}>Contact</li>
+        <li
+          onClick={() =>
+            document
+              .getElementById("home")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          Home
+        </li>
+
+        <li
+          onClick={() =>
+            document
+              .getElementById("about")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          About
+        </li>
+
+        <li
+          onClick={() =>
+            document
+              .getElementById("skills")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          Skills
+        </li>
+
+        <li
+          onClick={() =>
+            document
+              .getElementById("projects")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          Projects
+        </li>
+
+        <li
+          onClick={() =>
+            document
+              .getElementById("contact")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          Contact
+        </li>
       </ul>
     </nav>
   );

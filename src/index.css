@@ -649,6 +649,13 @@ body {
   margin-top: 25px;
 }
 
+
+@media (max-width: 480px) {
+  .skillpage {
+    margin-top: -201px;
+  }
+}
+
 @media (max-width: 600px) {
   .skilltitle {
     font-size: 22px;
@@ -675,12 +682,14 @@ body {
 @media (max-width: 900px) {
   .skillcards-container {
     gap: 10px;
+    flex-wrap: wrap;       /* ✅ allows multiple rows */
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .skillcard.small {
-    min-width: 100px;
+    min-width: 45%;        /* ✅ forces 2 cards per row */
   }
-
 }
 
 @media (min-width: 1400px) {

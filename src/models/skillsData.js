@@ -6,8 +6,8 @@ export const skillsData = [
   },
   {
     id: 2,
-    title: "Design Tools",
-    content: ["Figma", "Adobe Illustrator"],
+    title: "Mobile Development",
+    content: ["React Native ", "Flutter"],
   },
   {
     id: 3,
@@ -18,10 +18,19 @@ export const skillsData = [
     id: 4,
     title: "Database",
     content: ["MySQL", "MongoDB"],
+  },{
+    id: 5,
+    title: "UI/UX & Design",
+    content: ["Figma Basics", "Adobe Illustrator", "Adobe Photoshop", "wireframing"],
   },
   {
-    id: 5,
+    id: 6,
+    title: "Tools & Platforms",
+    content: ["Git & GitHub", "VS Code", "Docker"],
+  },
+  {
+    id: 7,
     title: "Soft Skills",
-    content: ["Teamwork", "Leadership"],
+    content: ["Teamwork", "Leadership", "Communication", "Problem Solving", "Time Management"],
   },
 ];
