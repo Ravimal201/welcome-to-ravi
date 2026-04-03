@@ -38,7 +38,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 150px;
+  padding: 0px 70px;
   background: #0F1126;
   position: relative;
   z-index: 100;
@@ -784,9 +784,8 @@ body {
 .projects-container {
   position: relative;
   z-index: 1;
-
   display: flex;
-  gap: 20px;
+  gap: 35px;
   justify-content: center;
   align-items: center;
 
@@ -795,14 +794,15 @@ body {
 
 /* CARD */
 .project-card {
-  width: 220px;
-  height: 320px;
-
+  width: 280px;
+  height: 300px;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.3s;
 }
 
@@ -825,7 +825,7 @@ body {
 }
 /* HOVER EFFECT */
 .project-card:hover .card-bg {
-  filter:brightness(0%);
+  filter:brightness(10%);
 }
 
 /* CARD CONTENT */
@@ -849,6 +849,7 @@ body {
 }
 
 .project-card:hover h3 {
+  color: #969EF9;
   margin-top: 0;
 }
 /* DESCRIPTION - hidden by default */

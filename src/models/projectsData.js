@@ -1,5 +1,6 @@
 import img1 from "../reources/images/project1.png";
 import img2 from "../reources/images/project2.jpg";
+import img3 from "../reources/images/project3.png";
 
 export const projectsData = [
   {
@@ -23,7 +24,7 @@ export const projectsData = [
   {
     id: 3,
     title: "Workout Planner",
-    image: img1,
+    image: img3,
     desc: "Player training UI system",
     technologies: ["React", "CSS", "JavaScript"],
     duration: "2025 - Present",
