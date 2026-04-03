@@ -11,7 +11,25 @@ export default function CardSlider() {
     <section className="skillpage">
       <div className="skillcontainer">
         <h2 className="skilltitle">Technical Skills</h2>
+        {/* OTHER CARDS BELOW */}
+        <div className="skillcards-container">
+          {skillsData.map((card, index) => {
+            if (index === activeIndex) return null;
 
+            return (
+              <div
+                key={card.id}
+                className="skillcard small"
+                onMouseEnter={() => {
+                  setTimeout(() => handleCardClick(index), 80);
+                }}
+                onClick={() => handleCardClick(index)}
+              >
+                <h3>{card.title}</h3>
+              </div>
+            );
+          })}
+        </div>
         {/* ACTIVE CARD ON TOP */}
         {activeIndex !== null && (
           <div className="skillactive-row">
@@ -32,23 +50,6 @@ export default function CardSlider() {
               ))}
           </div>
         )}
-
-        {/* OTHER CARDS BELOW */}
-        <div className="skillcards-container">
-          {skillsData.map((card, index) => {
-            if (index === activeIndex) return null;
-
-            return (
-              <div
-                key={card.id}
-                className="skillcard small"
-                onClick={() => handleCardClick(index)}
-              >
-                <h3>{card.title}</h3>
-              </div>
-            );
-          })}
-        </div>
       </div>
     </section>
   );
