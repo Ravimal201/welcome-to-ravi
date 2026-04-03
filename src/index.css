@@ -637,10 +637,12 @@ body {
 }
 
 .skillcontent-list li {
+  font-size: 20px;
   margin-bottom: 5px;
 }
 .skillactive-row {
   font-family: poppins, sans-serif;
+  font-size: 30px;
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
@@ -748,15 +750,23 @@ body {
 
 /* project page */
 
+.ptoject-title {
+  font-family: alextrandia-black, sans-serif;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 20px;
+}
+
 /* PAGE BACKGROUND */
 .projectpage {
-  background-color: #373737;
+  background-color: black;
   position: relative;
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
   transition: background-image 0.5s ease;
+  
 }
 
 /* VIGNETTE + DARK BLUR EFFECT */
@@ -764,7 +774,7 @@ body {
   position: absolute;
   inset: 0;
 
-  background: radial-gradient(circle at center, transparent 40%, black 90%);
+  background: radial-gradient(circle at center, transparent 1%, black 100%);
   backdrop-filter: blur(8px);
 
   z-index: 0;
@@ -790,7 +800,6 @@ body {
 
   border-radius: 15px;
   overflow: hidden;
-
   position: relative;
   cursor: pointer;
 
@@ -801,33 +810,128 @@ body {
 .card-bg {
   position: absolute;
   inset: 0;
-
   background-size: cover;
   background-position: center;
-
+  filter: grayscale(90%) brightness(60%);
   transition: 0.4s;
 }
 
+.project-card:hover {
+  transform: scale(1.1);
+   border-radius: 30px;
+   background: #212121;
+   box-shadow: 0px 0px 30px #969EF9;
+  z-index: 10;
+}
 /* HOVER EFFECT */
 .project-card:hover .card-bg {
-  filter: brightness(0.2); /* dark card */
+  filter:brightness(0%);
 }
 
 /* CARD CONTENT */
 .card-content {
   position: absolute;
-  bottom: 0;
+  text-align: center;
+  margin-top: 10px;
+
   color: white;
   padding: 15px;
   z-index: 2;
+  height: 100%;
+
+  transition: all 0.4s ease;
 }
 
-/* TITLE */
 .project-card h3 {
-  margin: 0;
+  font-family: poppins-bold, sans-serif;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
-/* DESCRIPTION */
+.project-card:hover h3 {
+  margin-top: 0;
+}
+/* DESCRIPTION - hidden by default */
 .project-card p {
+  font-family: poppins, sans-serif;
   font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+
+  transition: 0.3s ease;
+}
+
+/* SHOW DESCRIPTION ON HOVER */
+.project-card:hover p {
+  margin-top: 10px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* BUTTON */
+.github-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  font-family: poppins-semi, sans-serif;
+  text-align: center;
+  padding: 8px;
+  border-radius: 8px;
+
+  background: #969EF9;
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+}
+
+/* SHOW BUTTON ON HOVER */
+.project-card:hover .github-btn {
+  margin-bottom: 15px;
+  opacity: 1;
+  transform: translateY(0);
+}
+.github-btn:hover {
+  background: white;
+  color: black;
+}
+.tech-list {
+  font-family: poppins, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+}
+
+.tech-list li {
+  font-size: 11px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #373737;
+  border: 1px solid #969EF9;
+  color: #969EF9;
+}
+.project-duration {
+  font-family: poppins, sans-serif;
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #ccc;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+}
+.project-card:hover .tech-list,
+.project-card:hover .project-duration {
+  opacity: 1;
+  transform: translateY(0);
 }
