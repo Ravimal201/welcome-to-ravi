@@ -4,6 +4,7 @@ import Home from "./views/Home";
 import About from "./views/About";
 import myImg from "./reources/images/aboutmy.png";
 import SkillPage from "./views/SkillPage";
+import ProjectPage from "./views/ProjectPage";
 import "./index.css";
 
 function App() {
@@ -25,11 +26,18 @@ function App() {
           }}
         />
       </section>
-      <section id="projects">{/* <Projects /> */}</section>
-      <section id="skills">
+
+      <section className="section skill" id="skills">
         <SkillPage />
       </section>
-      <section id="contact">{/* <Contact /> */}</section>
+
+      <section className="section projects" id="projects">
+        {<ProjectPage />}
+      </section>
+
+      <section className="section contacts" id="contact">
+        {/* <Contact /> */}
+      </section>
     </>
   );
 }
