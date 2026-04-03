@@ -653,10 +653,34 @@ body {
   margin-top: 25px;
 }
 
-
 @media (max-width: 480px) {
   .skillpage {
     margin-top: -201px;
+  }
+
+  .skillcontent-list li {
+    font-size: 12px;
+  }
+
+  .skillcards-container {
+    display: flex;
+    flex-wrap: wrap;          /* allow multiple rows */
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .skillcard.small {
+    flex: 1 1 20%;            /* ✅ 2 cards per row */
+    max-width: 45%;
+    font-size: 12px;
+    min-width: unset;         /* remove old limits */
+  }
+
+  .skillcard.active {
+    flex: 1 1 100%;           /* ✅ active card full width */
+    max-width: 100%;
+    font-size: 16px;
+    margin-bottom: 15px;
   }
 }
 
@@ -668,31 +692,38 @@ body {
 
   .skillcards-container {
     gap: 10px;
-    flex-direction: column;   /* stack cards */
+    flex-direction: row;   /* stack cards */
     align-items: center;
   }
 
   .skillcard.small {
-    width: 90%;
-    max-width: 300px;
+    min-width: 20%;        /* ✅ forces 2 cards per row */
   }
 
   .skillcard.active {
-    min-width: 280px;
+    font-size: 18px;
+    min-width: 350px;
+    max-height: auto;
     transform: scale(1.02);
+    margin-bottom: 20px;
   }
+
+  .skillcontent-list li {
+    font-size: 16px;
+  }
+
 }
 
 @media (max-width: 900px) {
   .skillcards-container {
     gap: 10px;
     flex-wrap: wrap;       /* ✅ allows multiple rows */
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   .skillcard.small {
-    min-width: 45%;        /* ✅ forces 2 cards per row */
+    min-width: 28%;        /* ✅ forces  cards per row */
   }
 }
 
@@ -719,7 +750,7 @@ body {
 
 /* base section */
 .section {
-  position: sticky;
+  position: relative;
   top: 0;
   transform-origin: top;
   transition: transform 0.4s ease;
