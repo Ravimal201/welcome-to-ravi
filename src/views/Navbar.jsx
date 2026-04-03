@@ -30,6 +30,7 @@ function Navbar() {
 
       <ul className={menuOpen ? "nav-links active" : "nav-links"}>
         <li
+          onMouseMove={handleMouseMove}
           onClick={() =>
             document
               .getElementById("home")
@@ -40,6 +41,7 @@ function Navbar() {
         </li>
 
         <li
+          onMouseMove={handleMouseMove}
           onClick={() =>
             document
               .getElementById("about")
@@ -50,6 +52,7 @@ function Navbar() {
         </li>
 
         <li
+          onMouseMove={handleMouseMove}
           onClick={() =>
             document
               .getElementById("skills")
@@ -60,6 +63,7 @@ function Navbar() {
         </li>
 
         <li
+          onMouseMove={handleMouseMove}
           onClick={() =>
             document
               .getElementById("projects")
@@ -70,6 +74,7 @@ function Navbar() {
         </li>
 
         <li
+          onMouseMove={handleMouseMove}
           onClick={() =>
             document
               .getElementById("contact")
