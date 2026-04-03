@@ -36,7 +36,7 @@ export const projectsData = [
     image: img2,
     desc: "Training reminder system",
     technologies: ["Java", "Firebase"],
-    duration: "2024 - Present",
+    duration: "2024 - 2025",
     github: "https://github.com/yourusername/workout-reminder",
   }
 ];
