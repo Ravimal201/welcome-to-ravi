@@ -1,15 +1,26 @@
 import { getProfile } from "../controllers/profileController";
-import myImg from "../reources/images/fullimage.png";
+import seOne from "../reources/images/seOne.png";
+import seTwo from "../reources/images/seTwo.png";
+import myImg from "../reources/images/homeimage.png";
+import imRavi from "../reources/images/imRavimal.png";
 import videoBg from "../reources/images/videoBg.mp4";
 
 function Home() {
-    const data = getProfile();
+    const data = getProfile();  
 
     return (
         <section className="home">
+            <video className="bg-video" src={videoBg} autoPlay loop muted />
+
             <div className="homebox">
-                <video src={videoBg} autoPlay loop muted />
-                <img src={myImg} alt="Ravimal" />
+                <img className="homeboximgRavi" src={imRavi} alt="Ravimal" />
+
+                <div className="imageBox">
+                    <img className="homeboximg one" src={seOne} alt="SE One" />
+                    <img  className="homemyimg" src={myImg} alt="My Image" />
+                    
+                    <img className="homeboximg two" src={seTwo} alt="SE Two" />
+                </div>
             </div>
         </section>
     );
