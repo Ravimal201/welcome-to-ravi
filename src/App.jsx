@@ -27,16 +27,20 @@ function App() {
         />
       </section>
 
-      <section className="section skill" id="skills">
+      <section className="skill" id="skills">
         <SkillPage />
       </section>
 
-      <section className="section projects" id="projects">
+      <section className="projects" id="projects">
         {<ProjectPage />}
       </section>
 
+      <section className="section achievements" id="achievements">
+        {<Home />}
+      </section>
+
       <section className="section contacts" id="contact">
-        {/* <Contact /> */}
+        {<Home />}
       </section>
     </>
   );
