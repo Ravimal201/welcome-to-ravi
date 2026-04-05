@@ -17,16 +17,7 @@ function App() {
         <Home />
       </section>
       <section id="about">
-        <About
-          title="About me"
-          description="I’m a Computer Science undergraduate at Uva Wellassa University of Sri Lanka, graduating in 2027. I’m passionate about software development, game development, web technologies, and UI/UX design. I enjoy working in teams and continuously improving my skills."
-          education={{
-            degree: "BSC (HONS) IN COMPUTER SCIENCE AND TECHNOLOGY",
-            university: "Uva Wellassa University of Sri Lanka",
-            year: "2027",
-            image: myImg,
-          }}
-        />
+        <About />
       </section>
 
       <section className="skill" id="skills">
@@ -37,12 +28,12 @@ function App() {
         {<ProjectPage />}
       </section>
 
-      <section className="section achievements" id="achievements">
+      <section className="section achievements" id="certificates">
         {<Achievement />}
       </section>
 
       <section className="section contacts" id="contact">
-        {/*<Contacts />*/}
+        {<Contacts />}
       </section>
     </>
   );

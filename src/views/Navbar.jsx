@@ -37,7 +37,7 @@ function Navbar() {
               .scrollIntoView({ behavior: "smooth" })
           }
         >
-          Home
+          HOME
         </li>
 
         <li
@@ -48,7 +48,7 @@ function Navbar() {
               .scrollIntoView({ behavior: "smooth" })
           }
         >
-          About
+          ABOUT ME
         </li>
 
         <li
@@ -59,7 +59,7 @@ function Navbar() {
               .scrollIntoView({ behavior: "smooth" })
           }
         >
-          Skills
+          SKILLS
         </li>
 
         <li
@@ -70,7 +70,17 @@ function Navbar() {
               .scrollIntoView({ behavior: "smooth" })
           }
         >
-          Projects
+          PROJECTS
+        </li>
+        <li
+          onMouseMove={handleMouseMove}
+          onClick={() =>
+            document
+              .getElementById("certificates")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          CERTIFICATES
         </li>
 
         <li
@@ -81,7 +91,7 @@ function Navbar() {
               .scrollIntoView({ behavior: "smooth" })
           }
         >
-          Contact
+          CONTACTS
         </li>
       </ul>
     </nav>

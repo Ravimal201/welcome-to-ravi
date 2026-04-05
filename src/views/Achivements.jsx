@@ -6,7 +6,7 @@ export default function Achievement() {
     <section className="achievementpage">
       <div className="achievement-container">
         <div className="achievement-title">
-          <h1>Achievements</h1>
+          <h1>CERTIFICATES</h1>
           <p>
             Training milestones that helped sharpen my technical depth,
             practical troubleshooting, and real-world problem solving.
