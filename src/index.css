@@ -35,13 +35,17 @@ body {
 
 /* NAVBAR SECTION */
 .navbar {
+  position: sticky;
+  top: 0;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
   padding: 0px 70px;
   background: #0F1126;
-  position: relative;
-  z-index: 100;
+  
+  z-index: 1000;
 }
 
 .logo {
@@ -557,12 +561,18 @@ body {
 }
 
 /* Title */
-.skilltitle {
+.skilltitle{
   font-family: alextrandia-black, sans-serif;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   font-size: 40px;
   text-align: center;
 }
+
+.skilltitlep {
+  font-family: poppins, sans-serif;
+  font-size: 18px;
+  margin-bottom: 40px;
+} 
 
 /* Cards layout */
 .skillcards-container {
@@ -974,4 +984,235 @@ body {
 .project-card:hover .project-duration {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+
+
+
+
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #969EF9;
+  height: 80vh;
+}
+
+/* CONTACT CARD STYLE */
+.glass {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  background: linear-gradient(#ffffff22, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+  border-radius: 12px;
+  margin: 0 -45px;
+  backdrop-filter: blur(10px);
+
+  transform: rotate(calc(var(--r) * 1deg));
+}
+
+/* hover effect */
+.container:hover .glass {
+  transform: rotate(0deg);
+  margin: 0 10px;
+}
+
+/* label */
+.glass::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* icon */
+.glass svg {
+  font-size: 2.5em;
+  fill: #fff;
+}
+
+
+
+
+
+
+
+
+
+.achievementpage {
+  background-color: black;
+}
+
+.achievement-title {
+    font-family: alextrandia-black, sans-serif;
+  margin-bottom: 40px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.achievement-title p {
+  font-family: poppins, sans-serif;
+  font-size: 18px;
+  margin-top: 10px;
+}
+/* container */
+.achievement-container {
+   position: relative;
+  min-height: auto;
+  background: url(./reources/images/skillbg.jpg) no-repeat center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px;
+}
+.achievement-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 0;
+}
+.achievement-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.achivementcards {
+   display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  align-items: stretch; /* important */
+}
+
+/* BOOK CARD */
+.book {
+  position: relative;
+  width: 220px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #212121;
+  box-shadow: 1px 1px 12px #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform-style: preserve-3d;
+  perspective: 2000px;
+}
+
+/* INSIDE CONTENT */
+.inside {
+  text-align: center;
+  z-index: 1;
+}
+
+.status {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.year {
+  font-size: 14px;
+  color: gray;
+}
+
+/* COVER */
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #484d88, #565fc3);
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform-origin: left;
+  transition: transform 0.5s ease;
+
+  z-index: 2;
+}
+
+.cover-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-family: poppins-bold, sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.university {
+  font-family: poppins, sans-serif;
+  font-size: 18px;
+}
+
+.inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-left: 15px;
+}
+
+.inside-content {
+  text-align: center;
+}
+
+.description {
+  font-family: poppins, sans-serif;
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.status {
+  font-family: poppins-bold, sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.year {
+  font-family: poppins, sans-serif;
+  font-size: 14px;
+}
+/* HOVER EFFECT */
+.book:hover .cover {
+  transform: rotateY(-80deg);
+}
+
+
+/* TITLE */
+.title {
+  font-size: 18px;
+  font-weight: bold;
 }

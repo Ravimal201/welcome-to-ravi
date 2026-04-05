@@ -38,14 +38,5 @@ export const projectsData = [
     technologies: ["Java", "Firebase"],
     duration: "2024 - 2025",
     github: "https://github.com/yourusername/workout-reminder",
-  },
-  {
-    id: 5,
-    title: "Workout Reminder",
-    image: img2,
-    desc: "Training reminder system",
-    technologies: ["Java", "Firebase"],
-    duration: "2024 - 2025",
-    github: "https://github.com/yourusername/workout-reminder",
   }
 ];

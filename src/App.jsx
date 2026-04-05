@@ -5,6 +5,8 @@ import About from "./views/About";
 import myImg from "./reources/images/aboutmy.png";
 import SkillPage from "./views/SkillPage";
 import ProjectPage from "./views/ProjectPage";
+import Contacts from "./views/Contacts";
+import Achievement from "./views/Achivements";
 import "./index.css";
 
 function App() {
@@ -36,11 +38,11 @@ function App() {
       </section>
 
       <section className="section achievements" id="achievements">
-        {<Home />}
+        {<Achievement />}
       </section>
 
       <section className="section contacts" id="contact">
-        {<Home />}
+        {/*<Contacts />*/}
       </section>
     </>
   );
