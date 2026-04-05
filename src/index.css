@@ -540,7 +540,7 @@ body {
   }
 
   .education h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .education h3 {
@@ -583,6 +583,7 @@ body {
 
   .about-content h1 {
     text-align: center;
+    font-size: 26px;
   }
 
   .about-content p {
@@ -602,7 +603,9 @@ body {
     text-align: center;
   }
 
-  .education h2,
+  .education h2 {
+    font-family: 26px;
+  }
   .education h3,
   .education p {
     text-align: center;
@@ -762,6 +765,9 @@ body {
   .skillpage {
     margin-top: -201px;
   }
+  .skilltitle {
+    font-size: 26px;
+  }
 
   .skillcontent-list li {
     font-size: 12px;
@@ -787,7 +793,7 @@ body {
 
 @media (max-width: 600px) {
   .skilltitle {
-    font-size: 22px;
+    font-size: 26px;
     text-align: center;
   }
 
@@ -802,7 +808,7 @@ body {
   }
 
   .skillcard.active {
-    font-size: 18px;
+    font-size: 16px;
     min-width: 300px;
     transform: scale(1.02);
     margin-bottom: 20px;
@@ -824,6 +830,19 @@ body {
 
   .skillcard.small {
     min-width: 28%;        /* ✅ forces  cards per row */
+  }.skilltitle {
+    font-size: 26px;
+    text-align: center;
+  }
+  .skillcard.active {
+    font-size: 18px;
+    min-width: 300px;
+    transform: scale(1.02);
+    margin-bottom: 20px;
+  }
+
+  .skillcontent-list li {
+    font-size: 16px;
   }
 }
 
@@ -848,17 +867,15 @@ body {
 /*Transaction effectS */
 
 
-/* base section */
-.section {
-  position: sticky;
-  top: -300px;
-  transform-origin: top;
-  transition: transform 0.4s ease;
-}
+
 
 /* background layers */
 
-
+section {
+  position: relative;
+  width: 100%;
+  display: block;
+}
 
 .achievements {
   z-index: 1;
@@ -867,7 +884,6 @@ body {
 .contacts {
   z-index: 2;
 }
-
 
 
 
@@ -907,12 +923,6 @@ body {
   z-index: 2; /* ABOVE overlay */
 }
 
-.ptoject-title {
-  font-family: alextrandia-black, sans-serif;
-  font-size: 40px;
-  text-align: center;
-  z-index: 1;
-}
 /* CARDS CONTAINER */
 .projects-container {
   position: relative;
@@ -941,6 +951,26 @@ body {
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+}/* DEFAULT (Desktop) */
+/* 💻 Large tablets / small laptops */
+@media (max-width: 1024px) {
+  .project-card {
+    width: 260px;
+  }
+}
+
+/* 📱 Tablets */
+@media (max-width: 768px) {
+  .project-card {
+    width: 260px;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .project-card {
+    width: 180px;
+  }
 }
 
 /* CARD IMAGE */
@@ -1074,6 +1104,30 @@ body {
   transform: translateY(0);
 }
 
+.ptoject-title h1 {
+  font-family: alextrandia-black, sans-serif;
+  font-size: 40px; /* desktop default */
+  text-align: center;
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+  .ptoject-title h1 {
+    font-size: 26px;
+  }
+}
+
+/* 📱 Large phones / small tablets */
+@media (max-width: 768px) {
+  .ptoject-title h1 {
+    font-size: 26px;
+  }
+}
+
+/* 💻 Tablets */
+@media (max-width: 1024px) {
+  
+}
 
 
 
@@ -1089,7 +1143,7 @@ body {
 
 .contact-title {
   font-family: alextrandia-black, sans-serif;
-  font-size: 36px;
+  font-size: 40px;
   text-align: center;
   padding: 40px;
 }
@@ -1113,7 +1167,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: inherit;
-  gap: 10px;
+  gap:10px;
   padding-inline: 2em;
   padding-bottom: 0.4em;
   background-color: #171717;
@@ -1176,6 +1230,10 @@ body {
   background-image: linear-gradient(163deg, #969EF9 0%, #969EF9 100%);
   border-radius: 22px;
   transition: all 0.3s;
+  border-radius: 22px;
+  transition: all 0.3s;
+  width: 800px;
+  max-width: 95%;
 }
 
 .form-card1:hover {
@@ -1193,8 +1251,29 @@ body {
   border-radius: 20px;
 }
 
+@media (max-width: 1025px) {
+  .form-card1 {
+    width: 630px;
+  }
+}
 
+@media (max-width: 760px) {
+  .form-card1 {
+    width: 400px;
+  }
+  .form-heading {
+  font-size: 1em;
+}
+}
 
+@media (max-width: 480px) {
+  .form-card1 {
+    width: 250px
+  }
+  .form-heading {
+  font-size: 0.8em;
+}
+}
 
 
 
@@ -1377,7 +1456,12 @@ body {
 }
 
 
+
 @media (max-width: 480px) {
+
+  .achievement-title {
+    font-size: 26px;
+  }
   .book {
     width: 160px;
     height: 240px;
@@ -1413,6 +1497,10 @@ body {
 
   .achivementcards {
     gap: 25px;
+  }.contact-title {
+    font-size: 26px;
+  }.achievement-title {
+    font-size: 26px;
   }
 }
 @media (max-width: 1024px) {
