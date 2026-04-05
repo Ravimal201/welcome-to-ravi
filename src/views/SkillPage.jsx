@@ -11,6 +11,11 @@ export default function CardSlider() {
     <section className="skillpage">
       <div className="skillcontainer">
         <h2 className="skilltitle">Technical Skills</h2>
+        <p className="skilltitlep">
+          Technologies and tools I use to build, learn, and grow as a
+          developer.Technologies and tools I use to build, learn, and grow as a
+          developer.
+        </p>
         {/* OTHER CARDS BELOW */}
         <div className="skillcards-container">
           {skillsData.map((card, index) => {
