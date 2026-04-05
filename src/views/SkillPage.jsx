@@ -10,7 +10,7 @@ export default function CardSlider() {
   return (
     <section className="skillpage">
       <div className="skillcontainer">
-        <h2 className="skilltitle">Technical Skills</h2>
+        <h2 className="skilltitle">TECHNICAL SKILLS</h2>
         <p className="skilltitlep">
           Technologies and tools I use to build, learn, and grow as a
           developer.Technologies and tools I use to build, learn, and grow as a
