@@ -52,6 +52,7 @@ body {
   display: flex;
   align-items: center;
   font-size: larger;
+  cursor: pointer;
 }
 
 .navbar h1 {
