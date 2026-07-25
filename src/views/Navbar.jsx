@@ -91,7 +91,7 @@ function Navbar() {
               .scrollIntoView({ behavior: "smooth" })
           }
         >
-          CONTACTS
+          CONTACT ME
         </li>
       </ul>
     </nav>
