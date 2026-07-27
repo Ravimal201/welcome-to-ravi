@@ -2,7 +2,6 @@ import { useState } from "react";
 import Navbar from "./views/Navbar";
 import Home from "./views/Home";
 import About from "./views/About";
-import myImg from "./reources/images/aboutmy.png";
 import SkillPage from "./views/SkillPage";
 import ProjectPage from "./views/ProjectPage";
 import Contacts from "./views/Contacts";
