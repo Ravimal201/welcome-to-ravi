@@ -1,3 +1,4 @@
+import img0 from "../reources/images/project0.png";
 import img1 from "../reources/images/project1.png";
 import img2 from "../reources/images/project2.jpg";
 import img3 from "../reources/images/project3.png";
@@ -7,11 +8,11 @@ export const projectsData = [
   {
     id: 1,
     title: "Printsphere",
-    image: img1,
+    image: img0,
     desc: "full-stack e-commerce platform with an interactive 3D T-shirt customization feature.",
     technologies: ["MongoDB", "Express.js", "React.js" , "Node.js", "Three.js","Tailwind CSS"],
-    duration: "2025",
-    github: "https://github.com/yourusername/3d-tshirt-customization",
+    duration: "2026",
+    github: "https://github.com/Ravimal201/PrintSphere-Frontend",
   },{
     id: 2,
     title: "E-Athlete Web Platform",
