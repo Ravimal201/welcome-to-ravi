@@ -6,6 +6,14 @@ import img4 from "../reources/images/project4.png";
 export const projectsData = [
   {
     id: 1,
+    title: "Printsphere",
+    image: img1,
+    desc: "full-stack e-commerce platform with an interactive 3D T-shirt customization feature.",
+    technologies: ["MongoDB", "Express.js", "React.js" , "Node.js", "Three.js","Tailwind CSS"],
+    duration: "2025",
+    github: "https://github.com/yourusername/3d-tshirt-customization",
+  },{
+    id: 2,
     title: "E-Athlete Web Platform",
     image: img1,
     desc: " Online Sports Learning and Training web platform",
@@ -14,7 +22,7 @@ export const projectsData = [
     github: "https://github.com/yourusername/e-athlete",
   },
   {
-    id: 2,
+    id: 3,
     title: "2D Santa Game",
     image: img2,
     desc: "Simple 2D web based game.",
@@ -23,7 +31,7 @@ export const projectsData = [
     github: "https://github.com/yourusername/lan-challenge",
   },
   {
-    id: 3,
+    id: 4,
     title: "GPA Calculator",
     image: img3,
     desc: "Simple GPA Calculator app",
@@ -32,7 +40,7 @@ export const projectsData = [
     github: "https://github.com/yourusername/workout-planner",
   },
   {
-    id: 4,
+    id: 5,
     title: "Orchid Food Shop App - UX/UI Design",
     image: img4,
     desc: "UX/UI Design for the Orchid Food Ordering App",
