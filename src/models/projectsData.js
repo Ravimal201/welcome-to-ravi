@@ -3,6 +3,7 @@ import img1 from "../reources/images/project1.png";
 import img2 from "../reources/images/project2.jpg";
 import img3 from "../reources/images/project3.png";
 import img4 from "../reources/images/project4.png";
+import img5 from "../reources/images/project5.jpg";
 
 export const projectsData = [
   {
@@ -29,7 +30,7 @@ export const projectsData = [
     desc: "Simple 2D web based game.",
     technologies: ["JavaScript", "Html5", "CSS3"],
     duration: "2025",
-    github: "https://github.com/yourusername/lan-challenge",
+    github: "https://github.com/Ravimal201/Santa2DGamebyRavimal",
   },
   {
     id: 4,
@@ -48,5 +49,14 @@ export const projectsData = [
     technologies: ["Figma"],
     duration: "2025",
     github: "https://github.com/yourusername/workout-reminder",
+  },
+  {
+    id: 6,
+    title: "Vehicle-Maintenance-System",
+    image: img5,
+    desc: "Developed a management system to maintain vehicle service records and maintenance schedules.",
+    technologies: ["Java", "MySQL"],
+    duration: "2025",
+    github: "https://github.com/Ravimal201/Vehicle-Maintenance-System",
   }
 ];
