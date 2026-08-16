@@ -2,7 +2,7 @@ export const contactButtons = [
   {
     id: 1,
     label: "View Resume",
-    link: "", // or Google Drive link
+    link: "https://drive.google.com/drive/folders/1bsOBFKHSKjH3QtK5Ez5ICQImbIi9SDoZ?usp=sharing",
   },
   {
     id: 2,
@@ -12,6 +12,6 @@ export const contactButtons = [
   {
     id: 3,
     label: "LinkedIn",
-    link: "https://www.linkedin.com/in/sachinthaka-ravimal-74a2672b7/",
+    link: "https://www.linkedin.com/in/sachinthaka-ravimal/",
   },
 ];
