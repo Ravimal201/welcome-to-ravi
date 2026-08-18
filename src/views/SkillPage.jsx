@@ -1,60 +1,40 @@
-import { useState } from "react";
 import "../index.css";
 
 import { skillsData } from "../models/skillsData";
-import useCardController from "../controllers/skillCardController";
 
 export default function CardSlider() {
-  const { activeIndex, handleCardClick } = useCardController();
-
   return (
     <section className="skillpage">
       <div className="skillcontainer">
-        <h2 className="skilltitle">TECHNICAL SKILLS</h2>
-        <p className="skilltitlep">
-          Technologies and tools I use to build, learn, and grow as a
-          developer.Technologies and tools I use to build, learn, and grow as a
-          developer.
-        </p>
-        {/* OTHER CARDS BELOW */}
-        <div className="skillcards-container">
-          {skillsData.map((card, index) => {
-            if (index === activeIndex) return null;
+        <div className="skill-header">
+          <h2 className="skilltitle">Technical Skills</h2>
+          <p className="skilltitlep">
+            I build modern, user-focused digital experiences with a strong mix
+            of frontend, mobile, and problem-solving skills across development
+            and design workflows.
+          </p>
+        </div>
 
-            return (
-              <div
-                key={card.id}
-                className="skillcard small"
-                onMouseEnter={() => {
-                  setTimeout(() => handleCardClick(index), 80);
-                }}
-                onClick={() => handleCardClick(index)}
-              >
+        <div className="skill-showcase">
+          {skillsData.map((card) => (
+            <div key={card.id} className="skill-group">
+              <div className="skill-group-header">
+                <span className="skill-group-number">
+                  {String(card.id).padStart(2, "0")}
+                </span>
                 <h3>{card.title}</h3>
               </div>
-            );
-          })}
-        </div>
-        {/* ACTIVE CARD ON TOP */}
-        {activeIndex !== null && (
-          <div className="skillactive-row">
-            {skillsData
-              .filter((_, index) => index === activeIndex)
-              .map((card) => (
-                <div key={card.id} className="skillcard active">
-                  <h3>{card.title}</h3>
 
-                  <div className="skillcontent-container">
-                    <ul className="skillcontent-list">
-                      {card.content.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-          </div>
-        )}
+              <div className="skill-tag-list-inner">
+                {card.content.map((item) => (
+                  <span key={`${card.id}-${item}`} className="skill-tag">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
