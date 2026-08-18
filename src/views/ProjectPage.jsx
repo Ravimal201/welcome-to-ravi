@@ -1,55 +1,40 @@
-import { useState } from "react";
 import "../index.css";
 import { projectsData } from "../models/projectsData";
 
 export default function ProjectPage() {
-  const [activeBg, setActiveBg] = useState(null);
-
   return (
-    <div>
-      <div
-        className="projectpage"
-        style={{
-          backgroundImage: activeBg
-            ? `url(${activeBg})`
-            : `url(/reources/images/projectbg.jpg)`,
-        }}
-      >
-        <div className="bg-overlay"></div>
+    <div className="projectpage">
+      <div className="project-overlay"></div>
 
-        <div className="content-wrapper">
-          <div className="ptoject-title">
-            <h1>PROJECTS</h1>
-          </div>
+      <div className="content-wrapper">
+        <div className="project-header">
+          <p className="section-eyebrow">Featured Work</p>
+          <h1>PROJECTS</h1>
+        </div>
 
-          <div className="projects-container">
-            {projectsData.map((project) => (
+        <div className="projects-container">
+          {projectsData.map((project) => (
+            <article key={project.id} className="project-card">
               <div
-                key={project.id}
-                className="project-card"
-                onMouseEnter={() => setActiveBg(project.image)}
-                onMouseLeave={() => setActiveBg(null)}
+                className="card-image"
+                style={{ backgroundImage: `url(${project.image})` }}
               >
-                <div
-                  className="card-bg"
-                  style={{ backgroundImage: `url(${project.image})` }}
-                ></div>
+                <div className="image-overlay"></div>
+              </div>
 
-                <div className="card-content">
-                  <h3>{project.title}</h3>
+              <div className="card-content">
+                <span className="project-index">0{project.id}</span>
+                <h3>{project.title}</h3>
+                <p>{project.desc}</p>
 
-                  <p>{project.desc}</p>
+                <ul className="tech-list">
+                  {project.technologies.map((tech, index) => (
+                    <li key={`${project.id}-${tech}-${index}`}>{tech}</li>
+                  ))}
+                </ul>
 
-                  {/* Technologies */}
-                  <ul className="tech-list">
-                    {project.technologies.map((tech, index) => (
-                      <li key={index}>{tech}</li>
-                    ))}
-                  </ul>
-
-                  {/* Duration */}
+                <div className="project-meta">
                   <span className="project-duration">{project.duration}</span>
-
                   <a
                     href={project.github}
                     target="_blank"
@@ -60,8 +45,8 @@ export default function ProjectPage() {
                   </a>
                 </div>
               </div>
-            ))}
-          </div>
+            </article>
+          ))}
         </div>
       </div>
     </div>
