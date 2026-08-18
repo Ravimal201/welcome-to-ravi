@@ -7,7 +7,7 @@ export default function CardSlider() {
     <section className="skillpage">
       <div className="skillcontainer">
         <div className="skill-header">
-          <h2 className="skilltitle">Technical Skills</h2>
+          <h2 className="skilltitle">TECHNICAL SKILLS</h2>
           <p className="skilltitlep">
             I build modern, user-focused digital experiences with a strong mix
             of frontend, mobile, and problem-solving skills across development

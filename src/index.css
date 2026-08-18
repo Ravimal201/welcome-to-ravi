@@ -28,6 +28,19 @@ body {
   color: white;
 }
 
+/* Scroll margin for navbar offset */
+section#home {
+  scroll-margin-top: 80px;
+}
+
+section#about {
+  scroll-margin-top: 80px;
+}
+
+section#certificates {
+  scroll-margin-top: 30px;
+}
+
 
 
 
@@ -842,7 +855,7 @@ section {
 .project-header h1 {
   margin: 0;
   font-family: alextrandia-black, sans-serif;
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-size: 40px;
   color: #ffffff;
 }
 

@@ -8,7 +8,6 @@ export default function ProjectPage() {
 
       <div className="content-wrapper">
         <div className="project-header">
-          <p className="section-eyebrow">Featured Work</p>
           <h1>PROJECTS</h1>
         </div>
 
