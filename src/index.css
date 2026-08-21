@@ -819,15 +819,15 @@ section {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(rgba(5, 8, 22, 0.88), rgba(5, 8, 22, 0.88)),
-    url("./reources/images/skillbg.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(125, 132, 210, 0.1), rgba(122, 129, 207, 0.1)),
+    url("./reources/images/checkBg.png") center/cover no-repeat;
   overflow: hidden;
 }
 
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.72));
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), rgba(126, 97, 182, 0.16));
   z-index: 0;
 }
 
@@ -849,14 +849,14 @@ section {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-size: 0.8rem;
-  color: #aeb6ff;
+  color: #624493;
 }
 
 .project-header h1 {
   margin: 0;
   font-family: alextrandia-black, sans-serif;
   font-size: 40px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .projects-container {
@@ -874,8 +874,7 @@ section {
   min-height: 420px;
   border-radius: 22px;
   overflow: hidden;
-  background: rgba(16, 18, 32, 0.8);
-  border: 1px solid rgba(150, 158, 249, 0.24);
+  background: rgba(0, 0, 0, 0.9);
   box-shadow: 0 18px 30px rgba(0, 0, 0, 0.22);
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -899,12 +898,12 @@ section {
 .image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(47, 51, 95, 0.4) 0%, rgba(25, 28, 50, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(82, 57, 126, 0.35) 0%, rgba(25, 18, 45, 0.52) 100%);
   transition: background 0.25s ease;
 }
 
 .project-card:hover .image-overlay {
-  background: linear-gradient(135deg, rgba(60, 68, 125, 0.3) 0%, rgba(35, 40, 70, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(125, 91, 185, 0.25) 0%, rgba(43, 28, 74, 0.38) 100%);
 }
 
 .card-content {
@@ -978,7 +977,7 @@ section {
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #b9c0ff;
+  color: #d4c7ff;
 }
 
 .github-btn {
