@@ -6,6 +6,7 @@ import SkillPage from "./views/SkillPage";
 import ProjectPage from "./views/ProjectPage";
 import Contacts from "./views/Contacts";
 import Achievement from "./views/Achivements";
+import Footer from "./views/Footer";
 import "./index.css";
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <section className="section contacts" id="contact">
         {<Contacts />}
       </section>
+      <Footer />
     </>
   );
 }
