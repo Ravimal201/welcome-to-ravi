@@ -228,7 +228,7 @@ section#certificates {
   display: flex;
   align-items: center;
   font-size: larger;
-  cursor: pointer;
+  cursor: default;
 }
 
 .navbar h1 {
@@ -856,6 +856,7 @@ section#certificates {
 }
 
 .skill-group {
+  cursor: default;
   overflow: hidden;
   background: rgba(55, 55, 55, 0.7);
   border: 1px solid rgba(150, 158, 249, 0.3);
@@ -911,10 +912,9 @@ section#certificates {
   border-radius: 12px;
   background: #969EF9;
   color: #0f1126;
-  font-family: poppins-semi, sans-serif;
+  font-family: poppins-bold, sans-serif;
   font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .skill-group h3 {
@@ -940,6 +940,12 @@ section#certificates {
   color: #edf1ff;
   font-family: poppins-semi, sans-serif;
   font-size: 0.86rem;
+}
+
+.skill-tag:hover{
+  background: rgba(150, 158, 249);
+  color: #0f1126;
+  cursor: default;
 }
 
 @media (max-width: 900px) {
