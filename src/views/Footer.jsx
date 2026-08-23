@@ -20,6 +20,7 @@ function Footer() {
     <footer className="site-footer">
       <div className="footer-content">
         <div className="footer-intro">
+          <span className="footer-eyebrow">Available for meaningful work</span>
           <a
             className="footer-brand"
             href="#home"
@@ -31,6 +32,13 @@ function Footer() {
           <p>
             Building thoughtful digital experiences with code and curiosity.
           </p>
+          <a
+            className="footer-cta"
+            href="#contact"
+            onClick={(event) => scrollToSection(event, "contact")}
+          >
+            Start a conversation <span aria-hidden="true">↗</span>
+          </a>
         </div>
 
         <nav className="footer-nav" aria-label="Footer navigation">
