@@ -30,10 +30,24 @@ body {
 
 /* FOOTER */
 .site-footer {
-  background: #0f1126;
-  border-top: 1px solid rgba(150, 158, 249, 0.22);
-  padding: 56px 70px 24px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f1126 0%, #131733 58%, #101225 100%);
+  border-top: 1px solid rgba(150, 158, 249, 0.32);
+  padding: 72px 70px 26px;
   text-align: left;
+}
+
+.site-footer::after {
+  position: absolute;
+  right: 7%;
+  bottom: -120px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(150, 158, 249, 0.12);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
 }
 
 .footer-content {
@@ -47,10 +61,21 @@ body {
 .footer-brand,
 .footer-nav a,
 .footer-socials a,
-.footer-bottom a {
+.footer-bottom a,
+.footer-cta {
   color: white;
   text-decoration: none;
   transition: color 0.2s ease;
+}
+
+.footer-eyebrow {
+  display: block;
+  margin-bottom: 18px;
+  color: #969ef9;
+  font-family: poppins-semi, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
 }
 
 .footer-brand {
@@ -69,11 +94,28 @@ body {
 
 .footer-intro p {
   max-width: 290px;
-  margin-top: 16px;
+  margin-top: 18px;
   color: #a7a9bc;
   font-family: poppins, sans-serif;
   font-size: 13px;
-  line-height: 1.8;
+  line-height: 1.85;
+}
+
+.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 26px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #969ef9;
+  font-family: poppins-semi, sans-serif;
+  font-size: 12px;
+}
+
+.footer-cta span {
+  color: #969ef9;
+  font-size: 16px;
+  transition: transform 0.2s ease;
 }
 
 .footer-nav,
@@ -98,8 +140,13 @@ body {
 .footer-nav a:hover,
 .footer-socials a:hover,
 .footer-bottom a:hover,
-.footer-brand:hover {
+.footer-brand:hover,
+.footer-cta:hover {
   color: #969ef9;
+}
+
+.footer-cta:hover span {
+  transform: translate(3px, -3px);
 }
 
 .footer-bottom {
@@ -108,8 +155,8 @@ body {
   gap: 24px;
   max-width: 1180px;
   margin: 48px auto 0;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
   color: #77798d;
   font-family: poppins, sans-serif;
   font-size: 11px;
@@ -121,7 +168,7 @@ body {
 
 @media (max-width: 700px) {
   .site-footer {
-    padding: 44px 24px 22px;
+    padding: 52px 24px 22px;
   }
 
   .footer-content {
@@ -138,6 +185,11 @@ body {
     flex-direction: column;
     gap: 10px;
     margin-top: 36px;
+  }
+
+  .footer-nav,
+  .footer-socials {
+    gap: 13px;
   }
 }
 
