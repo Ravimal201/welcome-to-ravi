@@ -856,6 +856,7 @@ section#certificates {
 }
 
 .skill-group {
+  overflow: hidden;
   background: rgba(55, 55, 55, 0.7);
   border: 1px solid rgba(150, 158, 249, 0.3);
   border-radius: 18px;
@@ -863,6 +864,28 @@ section#certificates {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
   transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease,
     box-shadow 0.25s ease;
+}
+
+.skill-group-image-wrap {
+  height: 142px;
+  margin: -22px -20px 22px;
+  overflow: hidden;
+  background: #252842;
+}
+
+.skill-group-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.82;
+  filter: saturate(0.82);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.skill-group:hover .skill-group-image {
+  opacity: 1;
+  transform: scale(1.04);
 }
 
 .skill-group:hover {
@@ -944,6 +967,11 @@ section#certificates {
 
   .skill-group {
     padding: 18px 16px;
+  }
+
+  .skill-group-image-wrap {
+    height: 120px;
+    margin: -18px -16px 18px;
   }
 }
 

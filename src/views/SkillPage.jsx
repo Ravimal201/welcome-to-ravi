@@ -18,6 +18,14 @@ export default function CardSlider() {
         <div className="skill-showcase">
           {skillsData.map((card) => (
             <div key={card.id} className="skill-group">
+              <div className="skill-group-image-wrap">
+                <img
+                  className="skill-group-image"
+                  src={card.image}
+                  alt={`${card.title} skills`}
+                  loading="lazy"
+                />
+              </div>
               <div className="skill-group-header">
                 <span className="skill-group-number">
                   {String(card.id).padStart(2, "0")}
