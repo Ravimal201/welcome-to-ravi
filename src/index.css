@@ -1056,6 +1056,7 @@ section {
     url("./reources/images/checkBg.png") center/cover no-repeat;
   overflow: hidden;
   cursor: default;
+  margin-bottom: 50px;
 }
 
 .project-overlay {
@@ -1439,7 +1440,7 @@ section {
 .achievement-container {
   position: relative;
   min-height: 620px;
-  background: linear-gradient(120deg, rgba(7, 8, 13, 0.98) 8%, rgba(12, 14, 27, 0.78) 52%, rgba(7, 8, 13, 0.96) 100%), url(./reources/images/achivementbg.jpg) no-repeat center;
+  background: linear-gradient(120deg, rgba(7, 8, 13, 0.98) 8%, rgba(0, 0, 0, 0.88) 52%, rgba(7, 8, 13, 0.96) 100%), url(./reources/images/achivementbg.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   color: white;
