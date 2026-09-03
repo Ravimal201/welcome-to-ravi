@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [ripple, setRipple] = useState(null);
 
   const handleMouseMove = (e) => {
     const item = e.currentTarget;
@@ -9,6 +10,12 @@ function Navbar() {
 
     item.style.setProperty("--x", `${e.clientX - rect.left}px`);
     item.style.setProperty("--y", `${e.clientY - rect.top}px`);
+  };
+
+  const handleNavigation = (target, e) => {
+    setRipple({ x: e.clientX, y: e.clientY, id: Date.now() });
+    setMenuOpen(false);
+    document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -31,69 +38,49 @@ function Navbar() {
       <ul className={menuOpen ? "nav-links active" : "nav-links"}>
         <li
           onMouseMove={handleMouseMove}
-          onClick={() =>
-            document
-              .getElementById("home")
-              .scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={(e) => handleNavigation("home", e)}
         >
           HOME
         </li>
-
         <li
           onMouseMove={handleMouseMove}
-          onClick={() =>
-            document
-              .getElementById("about")
-              .scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={(e) => handleNavigation("about", e)}
         >
           ABOUT ME
         </li>
-
         <li
           onMouseMove={handleMouseMove}
-          onClick={() =>
-            document
-              .getElementById("skills")
-              .scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={(e) => handleNavigation("skills", e)}
         >
           SKILLS
         </li>
-
         <li
           onMouseMove={handleMouseMove}
-          onClick={() =>
-            document
-              .getElementById("projects")
-              .scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={(e) => handleNavigation("projects", e)}
         >
           PROJECTS
         </li>
         <li
           onMouseMove={handleMouseMove}
-          onClick={() =>
-            document
-              .getElementById("certificates")
-              .scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={(e) => handleNavigation("certificates", e)}
         >
           CERTIFICATES
         </li>
-
         <li
           onMouseMove={handleMouseMove}
-          onClick={() =>
-            document
-              .getElementById("contact")
-              .scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={(e) => handleNavigation("contact", e)}
         >
           CONTACT ME
         </li>
       </ul>
+      {ripple && (
+        <span
+          key={ripple.id}
+          className="water-ripple"
+          style={{ left: ripple.x, top: ripple.y }}
+          aria-hidden="true"
+        />
+      )}
     </nav>
   );
 }
