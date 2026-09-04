@@ -6,6 +6,7 @@ const footerLinks = [
   { label: "About", target: "about" },
   { label: "Skills", target: "skills" },
   { label: "Projects", target: "projects" },
+  { label: "Certificates", target: "certificates" },
   { label: "Contact", target: "contact" },
 ];
 
@@ -49,13 +50,44 @@ function Footer() {
           >
             <span className="footer-mark">&lt;/&gt;</span>
             <span>Sachinthaka Ravimal</span>
-            <span>
-              <p>
-                Building thoughtful digital experiences with code and curiosity.
-              </p>
-            </span>
           </a>
+          <p>
+            Building thoughtful digital experiences with code and curiosity.
+          </p>
         </div>
+
+        <nav className="footer-nav" aria-label="Footer navigation">
+          <span className="footer-label">Explore</span>
+          {footerLinks.map((link) => (
+            <a
+              key={link.target}
+              href={`#${link.target}`}
+              onClick={(event) => scrollToSection(event, link.target)}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="footer-socials">
+          <span className="footer-label">Elsewhere</span>
+          {contactButtons.slice(1).map((button) => (
+            <a
+              key={button.id}
+              href={button.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {button.label}
+              <span aria-hidden="true">↗</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <span>© {new Date().getFullYear()} Sachinthaka Ravimal</span>
+        <span>Designed &amp; built with care</span>
       </div>
     </footer>
   );
