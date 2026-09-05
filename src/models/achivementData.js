@@ -16,7 +16,7 @@ export const achievementData = [
   }, {
     id: 3,
     title: "AI for All by LEARN",
-    status: "In Progress",
+    status: "Completed",
     year: "2026",
     description: "Focuses on supervised learning techniques for solving real-world AI problems.",
     university: "LEARN",
