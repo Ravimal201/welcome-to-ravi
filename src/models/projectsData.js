@@ -48,7 +48,7 @@ export const projectsData = [
     desc: "UX/UI Design for the Orchid Food Ordering App",
     technologies: ["Figma"],
     duration: "2025",
-    figma: "https://www.figma.com/design/p15eYjEBMirMk70hUuVLO4/Orchid-Food-App?node-id=0-1&t=gVd6FlkETlem5onV-1",
+    github: "https://github.com/yourusername/workout-reminder",
   },
   {
     id: 6,

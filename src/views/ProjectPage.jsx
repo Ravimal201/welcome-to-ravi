@@ -34,28 +34,14 @@ export default function ProjectPage() {
 
                 <div className="project-meta">
                   <span className="project-duration">{project.duration}</span>
-                  <div className="project-links">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="github-btn"
-                      >
-                        View GitHub
-                      </a>
-                    )}
-                    {project.figma && (
-                      <a
-                        href={project.figma}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="figma-btn"
-                      >
-                        View Figma
-                      </a>
-                    )}
-                  </div>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github-btn"
+                  >
+                    View GitHub
+                  </a>
                 </div>
               </div>
             </article>
