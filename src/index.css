@@ -1465,19 +1465,11 @@ section {
   color: #d4c7ff;
 }
 
-.project-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 8px;
-}
-
-.github-btn,
-.figma-btn {
+.github-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 108px;
+  min-width: 118px;
   padding: 10px 16px;
   border-radius: 10px;
   background: #969ef9;
@@ -1488,10 +1480,8 @@ section {
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.github-btn:hover,
-.figma-btn:hover {
+.github-btn:hover {
   background: #ffffff;
-  color: #0b0d18;
   transform: translateY(-1px);
 }
 
