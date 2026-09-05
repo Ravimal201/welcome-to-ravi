@@ -10,8 +10,15 @@ export const achievementData = [
     id: 2,
     title: "AI/ML Stage 02",
     status: "In Progress",
-    year: "",
+    year: "2026",
     description: "Focuses on supervised learning techniques for solving real-world AI problems.",
     university: "SLIIT",
+  }, {
+    id: 3,
+    title: "AI for All by LEARN",
+    status: "In Progress",
+    year: "2026",
+    description: "Focuses on supervised learning techniques for solving real-world AI problems.",
+    university: "LEARN",
   }
 ];
