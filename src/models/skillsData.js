@@ -9,7 +9,7 @@ export const skillsData = [
     id: 2,
     title: "Mobile Development",
     image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=80",
-    content: ["React Native ", "Flutter"],
+    content: ["React Native "],
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const skillsData = [
     id: 5,
     title: "UI/UX & Design",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80",
-    content: ["Figma Basics", "Adobe Illustrator", "Adobe Photoshop", "wireframing"],
+    content: ["Figma Basics", "Adobe Illustrator", "Adobe Photoshop"],
   },
   {
     id: 6,

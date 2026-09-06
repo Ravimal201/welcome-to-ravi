@@ -1772,6 +1772,7 @@ section {
 .year {
   font-size: 14px;
   color: gray;
+  font-weight: bold;
 }
 
 /* COVER */
@@ -1784,8 +1785,8 @@ section {
   height: 100%;
   border-radius: 10px;
 
-  background: #969EF9;
-  color: black;
+  background: linear-gradient(145deg, #969ef9 0%, #6973d5 100%);
+  color: #0f1126;
 
   display: flex;
   justify-content: center;
@@ -1799,7 +1800,8 @@ section {
 
 .cover-content {
   text-align: center;
-  padding: 20px;
+  width: 100%;
+  padding: 20px 16px;
 }
 
 .title {
@@ -1842,6 +1844,21 @@ section {
   font-family: poppins, sans-serif;
   font-size: 14px;
 }
+
+.achievementpage .cover-content .status {
+  display: inline-block;
+  margin: 40px 0 8px;
+  color: rgba(15, 17, 38, 0.88);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.achievementpage .cover-content .year {
+  margin: 0;
+  color: rgba(15, 17, 38, 0.78);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
 /* HOVER EFFECT */
 .book:hover .cover {
   transform: rotateY(-80deg);
@@ -1882,6 +1899,16 @@ section {
   .status,
   .year {
     font-size: 12px;
+  }
+
+  .achievementpage .cover-content .status {
+    margin-top: 14px;
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .achievementpage .cover-content .year {
+    font-size: 11px;
   }
 
   .achivementcards {
