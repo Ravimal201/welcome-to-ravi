@@ -40,8 +40,6 @@ export default function Achievement() {
               <div className="inside">
                 <div className="inside-content">
                   <p className="description">{item.description}</p>
-                  <p className="status">{item.status}</p>
-                  {item.year && <p className="year">{item.year}</p>}
                 </div>
               </div>
 
@@ -50,6 +48,8 @@ export default function Achievement() {
                 <div className="cover-content">
                   <p className="title">{item.title}</p>
                   <p className="university">{item.university}</p>
+                  <p className="status">{item.status}</p>
+                  {item.year && <p className="year">{item.year}</p>}
                 </div>
               </div>
             </motion.div>

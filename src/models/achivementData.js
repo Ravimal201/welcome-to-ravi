@@ -15,10 +15,10 @@ export const achievementData = [
     university: "SLIIT",
   }, {
     id: 3,
-    title: "AI for All by LEARN",
+    title: "AI4All Sri Lanka course by LEARN",
     status: "Completed",
     year: "2026",
-    description: "Focuses on supervised learning techniques for solving real-world AI problems.",
+    description: "Focuses on foundational knowledge in AI, ML, and Generative AI. Developed an understanding of key AI concepts, applications, and their real-world use cases.",
     university: "LEARN",
   }
 ];
