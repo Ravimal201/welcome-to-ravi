@@ -1,5 +1,4 @@
 import { contactButtons } from "../models/contactButtons";
-import ContactForm from "../components/contactFrom";
 
 const footerLinks = [
   { label: "Home", target: "home" },
@@ -17,29 +16,7 @@ function Footer() {
   };
 
   return (
-    <footer className="site-footer" id="contact">
-      <div className="footer-contact-layout">
-        <div className="footer-contact-intro">
-          <span className="footer-eyebrow">Let&apos;s work together</span>
-          <h2>
-            Have an idea?
-            <br />
-            Let&apos;s talk.
-          </h2>
-          <p>
-            Tell me about your next project, opportunity, or big idea. I&apos;ll
-            get back to you as soon as possible.
-          </p>
-          <a className="footer-email" href="mailto:universityravimal@gmail.com">
-            universityravimal@gmail.com
-          </a>
-        </div>
-
-        <div className="footer-form-shell">
-          <ContactForm />
-        </div>
-      </div>
-
+    <footer className="site-footer">
       <div className="footer-content">
         <div className="footer-intro">
           <span className="footer-eyebrow">Available for meaningful work</span>
