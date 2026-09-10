@@ -4,6 +4,7 @@ import About from "./views/About";
 import SkillPage from "./views/SkillPage";
 import ProjectPage from "./views/ProjectPage";
 import Achievement from "./views/Achivements";
+import Contacts from "./views/Contacts";
 import Footer from "./views/Footer";
 import "./index.css";
 
@@ -28,6 +29,10 @@ function App() {
 
       <section className="section achievements" id="certificates">
         {<Achievement />}
+      </section>
+
+      <section id="contact">
+        <Contacts />
       </section>
 
       <Footer />
