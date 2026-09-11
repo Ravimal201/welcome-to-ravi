@@ -20,14 +20,19 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-intro">
           <span className="footer-eyebrow">Available for meaningful work</span>
-          <a
-            className="footer-brand"
-            href="#home"
-            onClick={(event) => scrollToSection(event, "home")}
-          >
-            <span className="footer-mark">&lt;/&gt;</span>
-            <span>Sachinthaka Ravimal</span>
-          </a>
+          <div className="footer-brand-row">
+            <span className="space-astronaut" aria-hidden="true">
+              👨‍🚀
+            </span>
+            <a
+              className="footer-brand"
+              href="#home"
+              onClick={(event) => scrollToSection(event, "home")}
+            >
+              <span className="footer-mark">&lt;/&gt;</span>
+              <span>Sachinthaka Ravimal</span>
+            </a>
+          </div>
           <p>
             Building thoughtful digital experiences with code and curiosity.
           </p>
