@@ -40,6 +40,7 @@ body {
   border-top: 1px solid rgba(150, 158, 249, 0.2);
   padding: 72px 70px 26px;
   text-align: left;
+  animation: footerFloat 14s ease-in-out infinite alternate;
 }
 
 .site-footer::before {
@@ -58,6 +59,7 @@ body {
   opacity: 0.95;
   content: "";
   pointer-events: none;
+  animation: starTwinkle 8s ease-in-out infinite alternate;
 }
 
 .site-footer::after {
@@ -71,6 +73,42 @@ body {
   box-shadow: 0 0 0 22px rgba(150, 158, 249, 0.025), 0 0 70px rgba(90, 96, 190, 0.2);
   content: "";
   pointer-events: none;
+  animation: orbPulse 9s ease-in-out infinite alternate;
+}
+
+@keyframes footerFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes starTwinkle {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes orbPulse {
+  0% {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 22px rgba(150, 158, 249, 0.025), 0 0 40px rgba(90, 96, 190, 0.18);
+  }
+  100% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 28px rgba(150, 158, 249, 0.03), 0 0 90px rgba(90, 96, 190, 0.24);
+  }
 }
 
 .footer-content {
@@ -103,6 +141,19 @@ body {
   box-shadow: 0 0 20px rgba(150, 158, 249, 0.2);
   font-size: 1.3rem;
   filter: saturate(1.1);
+  animation: astronautFloat 4s ease-in-out infinite;
+}
+
+@keyframes astronautFloat {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    box-shadow: 0 0 18px rgba(150, 158, 249, 0.15);
+  }
+  50% {
+    transform: translateY(-5px) rotate(6deg);
+    box-shadow: 0 0 28px rgba(150, 158, 249, 0.28);
+  }
 }
 
 .footer-brand,
@@ -111,7 +162,7 @@ body {
 .footer-cta {
   color: #f5f5f5;
   text-decoration: none;
-  transition: opacity 0.2s ease, color 0.2s ease;
+  transition: opacity 0.2s ease, color 0.2s ease, transform 0.25s ease, text-shadow 0.25s ease;
 }
 
 .footer-eyebrow {
@@ -214,6 +265,8 @@ body {
 .footer-cta:hover {
   color: #ffffff;
   opacity: 0.8;
+  transform: translateY(-2px);
+  text-shadow: 0 0 18px rgba(196, 201, 255, 0.7);
 }
 
 .footer-cta:hover span {
