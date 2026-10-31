@@ -1,59 +1,22 @@
 import { contactButtons } from "../models/contactButtons";
 
-const footerLinks = [
-  { label: "Home", target: "home" },
-  { label: "About", target: "about" },
-  { label: "Skills", target: "skills" },
-  { label: "Projects", target: "projects" },
-  { label: "Certificates", target: "certificates" },
-  { label: "Contact", target: "contact" },
-];
-
 function Footer() {
-  const scrollToSection = (event, target) => {
-    event.preventDefault();
-    document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const socialLinks = contactButtons.filter((button) => button.id !== 1);
+
   return (
-    <footer className="site-footer">
-      <div className="footer-content">
-        <div className="footer-intro">
-          <span className="footer-eyebrow">Available for meaningful work</span>
-          <div className="footer-brand-row">
-            <span className="space-astronaut" aria-hidden="true">
-              👨‍🚀
-            </span>
-            <a
-              className="footer-brand"
-              href="#home"
-              onClick={(event) => scrollToSection(event, "home")}
-            >
-              <span className="footer-mark">&lt;/&gt;</span>
-              <span>Sachinthaka Ravimal</span>
-            </a>
-          </div>
-          <p>
-            Building thoughtful digital experiences with code and curiosity.
-          </p>
+    <footer className="minimal-footer">
+      <div className="minimal-footer-inner">
+        <div className="minimal-footer-name">
+          <span className="minimal-footer-status" aria-hidden="true" />
+          <span>Sachinthaka Ravimal</span>
         </div>
 
-        <nav className="footer-nav" aria-label="Footer navigation">
-          <span className="footer-label">Explore</span>
-          {footerLinks.map((link) => (
-            <a
-              key={link.target}
-              href={`#${link.target}`}
-              onClick={(event) => scrollToSection(event, link.target)}
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <div className="footer-socials">
-          <span className="footer-label">Elsewhere</span>
-          {contactButtons.slice(1).map((button) => (
+        <nav className="minimal-footer-links" aria-label="Social links">
+          {socialLinks.map((button) => (
             <a
               key={button.id}
               href={button.link}
@@ -61,15 +24,24 @@ function Footer() {
               rel="noreferrer"
             >
               {button.label}
-              <span aria-hidden="true">↗</span>
             </a>
           ))}
-        </div>
+          <a href="mailto:universityravimal@gmail.com">Email</a>
+        </nav>
+
+        <button
+          className="minimal-footer-top"
+          type="button"
+          onClick={scrollToTop}
+          aria-label="Back to top"
+        >
+          <span aria-hidden="true">↑</span>
+        </button>
       </div>
 
-      <div className="footer-bottom">
+      <div className="minimal-footer-meta">
         <span>© {new Date().getFullYear()} Sachinthaka Ravimal</span>
-        <span>Designed &amp; built with care</span>
+        <span>Built with intention.</span>
       </div>
     </footer>
   );
