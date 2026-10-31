@@ -12,15 +12,6 @@ function Home() {
     <section className="home">
       <video className="bg-video" src={videoBg} autoPlay loop muted />
 
-      <div className="launch-rocket" aria-hidden="true">
-        <div className="rocket-flame" />
-        <div className="rocket-body">
-          <span className="rocket-window" />
-        </div>
-        <div className="rocket-fin left" />
-        <div className="rocket-fin right" />
-      </div>
-
       <div className="homebox">
         <img className="homeboximgRavi" src={imRavi} alt="Ravimal" />
 
